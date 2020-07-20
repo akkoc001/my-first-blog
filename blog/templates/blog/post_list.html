@@ -7,10 +7,15 @@
             <h1><a href="/">Döner Kebab auf deinen Nacken</a></h1>
         </div>
 
+        {% for post in posts %}
         <div>
-            <h2><a href="">Nur Mangal Döner du wayst</a></h2>
-            <p>mit Ayran all you can drink</p>
+            <p>published: {{ post.published_date }}</p>
+            <h2><a href="">{{ post.title }}</a></h2>
+            <p>{{ post.text|linebreaksbr }}</p>
+            <br>
+            <br>
         </div>
+    {% endfor %}
 
         <div>
             <h2><a href="">einfach nur köftespieß</a></h2>
